@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locators>
+<LoginNavigation>//a[contains(text(),'Login and Get Started!')]</LoginNavigation>
+<Username>name=HANDLE_ID</Username>
+<Password>name=PASSWORD</Password>
+<Loginbutton>name=submit</Loginbutton>
+<SkipeIntro>//*[@id="dealer-center-intro-modal"]/button</SkipeIntro>
+<Userinfo>id=profile-dealer-name</Userinfo>
+</locators>
