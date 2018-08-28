@@ -1,56 +1,51 @@
 package Testscript;
 import org.testng.annotations.Test;
-
 import Driver.DriverTestcase;
 import Reporter.ExtentTestManager;
 
 
-public class Assignment extends DriverTestcase {
-	
+public class Assignment extends DriverTestcase {	
 	
 @Test
 	public void LoginonFaceBook() throws Exception
 	{
-	ExtentTestManager.getTest().setDescription("Login on FaceBook");
-	
-	Login.Login("Facebook");
-	Login.VerifySuccessLogin("Facebook");
-	
+		ExtentTestManager.getTest().setDescription("Login on FaceBook");
+		Login.Login("Facebook");
+		Login.VerifySuccessLogin("Facebook");
 	}
+
 @Test
-public void LoginonWallnethub() throws Exception
-{
-//ExtentTestManager.getTest().setDescription("Login as an admin");
+	public void LoginonWallnethub() throws Exception
+	{
+		ExtentTestManager.getTest().setDescription("Login in to Wallnethub");
+		Login.Login("Wallnethub");
+		Login.VerifySuccessLogin("Wallnethub");
+	}
 
-Login.Login("Wallnethub");
-Login.VerifySuccessLogin("Wallnethub");
-
-}
 @Test
-public void WriteReviewonWallnethub() throws Exception
-{
-//ExtentTestManager.getTest().setDescription("Login as an admin");
+	public void WriteReviewonWallnethub() throws Exception
+	{
+		ExtentTestManager.getTest().setDescription("Write a review on wallnethub for the Test insurance Componey");
+		AssignmentmentHelper.OpenInsurancepage();
+		AssignmentmentHelper.Mouseoveronrating();
+		AssignmentmentHelper.Mouseoveronfourthrating();
+		AssignmentmentHelper.Assertfourthrating();
+		AssignmentmentHelper.ClickonFourthRating();
+		AssignmentmentHelper.OpenDropDown();
+		AssignmentmentHelper.SelectHealthoption();
+		AssignmentmentHelper.SelectFourRating();
+		AssignmentmentHelper.EnterTextData();
+		AssignmentmentHelper.Submitreview();
+		AssignmentmentHelper.VerifyReviewSubmited();
+	}
 
-	AssignmentmentHelper.OpenInsurancepage();
-	AssignmentmentHelper.Mouseoveronrating();
-	AssignmentmentHelper.Mouseoveronfourthrating();
-	AssignmentmentHelper.Assertfourthrating();
-	AssignmentmentHelper.ClickonFourthRating();
-	AssignmentmentHelper.OpenDropDown();
-	AssignmentmentHelper.SelectHealthoption();
-	AssignmentmentHelper.SelectFourRating();
-	AssignmentmentHelper.EnterTextData();
-	AssignmentmentHelper.Submitreview();
-	AssignmentmentHelper.VerifyReviewSubmited();
-}
 @Test
-public void VerifySubmittedReview() throws Exception
-{
-//ExtentTestManager.getTest().setDescription("Login as an admin");
-
-	AssignmentmentHelper.GotoProfile();
-	AssignmentmentHelper.GotoReviewSection();
-	AssignmentmentHelper.VerifySubmitedReview();
-	
-}
+	public void VerifySubmittedReview() throws Exception
+	{
+		ExtentTestManager.getTest().setDescription("Verify the Submitted Review in The User profile");
+		AssignmentmentHelper.GotoProfile();
+		AssignmentmentHelper.GotoReviewSection();
+		AssignmentmentHelper.VerifySubmitedReview();
+		
+	}
 }

@@ -30,7 +30,7 @@ public class DriverTestcase {
 		if(targatedbrowser.equals("chrome"))
 		{ DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		capabilities.setCapability(CapabilityType.PAGE_LOAD_STRATEGY, "none");
-			System.setProperty("webdriver.chrome.driver","C:\\Users\\ashwanis\\eclipse-workspace\\Demo\\lib\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver",".\\lib\\chromedriver.exe");
 			dr= new ChromeDriver(capabilities);
 		}
 		else if (targatedbrowser.equals("ie"))
@@ -43,14 +43,9 @@ public class DriverTestcase {
 			System.out.println("For FF inprogress");
 		}
 		
-		
-		// Open URL
 		dr.manage().window().maximize();
-		//dr.get(url);
-		
 		Login=new LoginHelper(getwebdriver());
-		
-		 AssignmentmentHelper=new Assignment2Helper(getwebdriver());
+		AssignmentmentHelper=new Assignment2Helper(getwebdriver());
 	}
 
 	
