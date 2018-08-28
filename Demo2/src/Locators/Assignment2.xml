@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locators>
+<insurancepage>
+<CurrentRating>//*[@id="wh-body-inner"]/div[2]/div[3]/span</CurrentRating>
+<fourthrating>//a[text()='4']</fourthrating>
+<Allselected>//a[@class='hover']</Allselected>
+</insurancepage>
+<reiviewpage>
+<DropDownlist>//*[@id="reviewform"]/div[1]/div/div/span[2]</DropDownlist>
+<HealthOption>//*[@id="reviewform"]/div[1]/div/ul/li[2]/a</HealthOption>
+<FourthStar>//*[@id="overallRating"]/a[4]</FourthStar>
+<ReviewComment>//*[@id="review-content"]</ReviewComment>
+<SubmitReview>//*[@id="reviewform"]/div[3]/div[2]/input</SubmitReview>
+<ConfirmationMessage>//*[@id="review"]/div[1]/h1</ConfirmationMessage>
+</reiviewpage>
+<profilepage>
+<OpenProfileDropdown>//*[@id="viewport"]/header/div/nav[3]/div[1]/a[8]</OpenProfileDropdown>
+<ProfileLink>//*[@id="m-user"]/ul/li[1]/a</ProfileLink>
+<ReviewTab>//*[@id="wh-body-inner"]/div[1]/div[1]/div[2]/ul/li[3]/a</ReviewTab>
+<ReviewComment>//*[@class="reviews"]/div/p</ReviewComment>
+</profilepage>
+</locators>

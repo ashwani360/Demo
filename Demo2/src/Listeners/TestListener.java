@@ -45,7 +45,10 @@ public class TestListener extends DriverTestcase implements ITestListener {
     public void onTestSuccess(ITestResult iTestResult) {
         System.out.println("I am in onTestSuccess method " +  getTestMethodName(iTestResult) + " succeed");
         //Extentreports log operation for passed tests.
-        ExtentTestManager.getTest().log(LogStatus.PASS, "Test passed");
+        if(getTestMethodName(iTestResult).equalsIgnoreCase("LoginonFaceBook"))
+        ExtentTestManager.getTest().log(LogStatus.PASS, "Hello World");
+        else
+        	ExtentTestManager.getTest().log(LogStatus.PASS, getTestMethodName(iTestResult)+" : Test Method has been passed");	
     }
  
     public void onTestFailure(ITestResult iTestResult) {

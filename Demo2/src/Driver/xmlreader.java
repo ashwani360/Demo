@@ -25,12 +25,6 @@ public String getlocator(String nodepath) throws DocumentException
 	
 }
 
-//public static void main(String args[]) throws Exception
-//{
-//	getlocator("C:\\Users\\ashwanis\\eclipse-workspace\\Demo\\src\\Locators\\locators.xml","//locators/home/Inputtextfield");
-//	getlocator("C:\\Users\\ashwanis\\eclipse-workspace\\Demo\\src\\Locators\\locators.xml","//locators/home/okbutton");
-//	getlocator("C:\\Users\\ashwanis\\eclipse-workspace\\Demo\\src\\Locators\\locators.xml","//locators/searchresult/firstlink");
-//	
-//}
+
 
 }

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <locators>
-<LoginNavigation>//a[contains(text(),'Login and Get Started!')]</LoginNavigation>
-<Username>name=HANDLE_ID</Username>
-<Password>name=PASSWORD</Password>
-<Loginbutton>name=submit</Loginbutton>
-<SkipeIntro>//*[@id="dealer-center-intro-modal"]/button</SkipeIntro>
-<Userinfo>id=profile-dealer-name</Userinfo>
+<Facebook>
+<Username>id=email</Username>
+<Password>id=pass</Password>
+<Loginbutton>//*[@value="Log In"]</Loginbutton>
+<Userinfo>//*[@id="u_0_a"]/div[1]/div[1]/div/a/span/span</Userinfo>
+</Facebook>
+<Wallnethub>
+<Username>name=em</Username>
+<Password>name=pw</Password>
+<Loginbutton>//*[@id="join-login"]/form/div[4]/button[2]</Loginbutton>
+<Userinfo>//*[@id="wh-body-inner"]/div[1]/div[1]/div[1]/div[2]/h1/span</Userinfo>
+</Wallnethub>
 </locators>

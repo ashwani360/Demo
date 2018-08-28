@@ -11,16 +11,12 @@ public class PropertyReader {
 	{ String St=null;
 	
 	Properties pr= new Properties();
-	InputStream file= new FileInputStream("C:\\Users\\ashwanis\\eclipse-workspace\\Demo2\\src\\Config\\config.properties");
+	InputStream file= new FileInputStream("src\\Config\\config.properties");
 	pr.load(file);
 	St=pr.getProperty(key);
 	return St;
 		
 	}
 	
-//	public static void main(String args[]) throws IOException {
-//		System.out.println(readproperty("browser"));
-//		System.out.println(readproperty("url"));
-//		
-//	}
+
 }

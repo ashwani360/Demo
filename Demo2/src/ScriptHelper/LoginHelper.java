@@ -13,7 +13,7 @@ public class LoginHelper extends DriverHelper{
 	
 	
 	WebElement el;
-	xmlreader xml=new xmlreader("C:\\Users\\ashwanis\\eclipse-workspace\\Demo2\\src\\Locators\\Login.xml");
+	xmlreader xml=new xmlreader("src\\Locators\\Login.xml");
 	
 	public LoginHelper(WebDriver parentdriver)
 	{
@@ -21,29 +21,24 @@ public class LoginHelper extends DriverHelper{
 	}
 
 //---------------------------------
-	public void Login() throws Exception
+	public void Login(String Application) throws Exception
 	{
 		// Click on the First link to navigate to the Login page
-		Clickon(getwebelement(xml.getlocator("//locators/LoginNavigation")));
-		Thread.sleep(1000);
+		openurl(Application);
 		// Enter the User name
-		SendKeys(getwebelement(xml.getlocator("//locators/Username")),Getkeyvalue("Username"));
+		SendKeys(getwebelement(xml.getlocator("//locators/"+Application+"/Username")),Getkeyvalue(Application+"_Username"));
 		// Enter Password
-		SendKeys(getwebelement(xml.getlocator("//locators/Password")),Getkeyvalue("Password"));
+		SendKeys(getwebelement(xml.getlocator("//locators/"+Application+"/Password")),Getkeyvalue(Application+"_Password"));
 		// Click on Login button
-		Clickon(getwebelement(xml.getlocator("//locators/Loginbutton")));
+		Clickon(getwebelement(xml.getlocator("//locators/"+Application+"/Loginbutton")));
 		// Skip the Intro Part
 		
-		Clickon(getwebelement(xml.getlocator("//locators/SkipeIntro")));
-		//System.out.pri
-		//SendinputKeys(getwebelement(xml.getlocator("//locators/SkipeIntro")),Keys.ESCAPE);
-		Thread.sleep(1000);
 		
 	}
-	public void VerifySuccessLogin() throws Exception
+	public void VerifySuccessLogin(String application) throws Exception
 	{
 		// Verify that the name of the Logged in user is gettign displayed
-		Assert.assertEquals(Getkeyvalue("LoggedinUser"), Gettext(getwebelement(xml.getlocator("//locators/Userinfo"))));
+		Assert.assertEquals(Getkeyvalue(application+"_LoggedinUser").contains(Gettext(getwebelement(xml.getlocator("//locators/"+application+"/Userinfo")))),true);
 		
 	}
 	

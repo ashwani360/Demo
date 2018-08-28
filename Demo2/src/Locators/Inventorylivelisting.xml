@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<locators>
-<Title>//*[@id="listing_5003872086"]/div[1]/h2/a</Title>
-<Keyword>//*[@id="keywordKey"]</Keyword>
-<Search>//*[@id="updateKeyKeyword"]</Search>
-</locators>

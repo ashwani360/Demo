@@ -1,39 +1,23 @@
 package Driver;
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
-import org.testng.ITestResult;
-import org.testng.Reporter;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
-import com.relevantcodes.extentreports.LogStatus;
-
-import Reporter.ExtentManager;
-import Reporter.ExtentTestManager;
-import ScriptHelper.InventoryHelper;
-import ScriptHelper.InventoryListingHelper;
-import ScriptHelper.LiveListingHelper;
+import ScriptHelper.Assignment2Helper;
 import ScriptHelper.LoginHelper;
-import junit.framework.Assert;
 
 public class DriverTestcase {
 	
 	public static WebDriver dr;
 	
 	public static LoginHelper Login;
-	public static InventoryHelper InventoryHelper;
-	public static InventoryListingHelper InventorylistingHelper;
-	public static LiveListingHelper InventorylivelistingHelper;
+	
+	public static Assignment2Helper AssignmentmentHelper;
 	@BeforeTest
 	public void setup() throws IOException
 	{
@@ -62,12 +46,11 @@ public class DriverTestcase {
 		
 		// Open URL
 		dr.manage().window().maximize();
-		dr.get(url);
+		//dr.get(url);
 		
 		Login=new LoginHelper(getwebdriver());
-		InventoryHelper=new InventoryHelper(getwebdriver());
-		 InventorylistingHelper=new InventoryListingHelper(getwebdriver());
-		 InventorylivelistingHelper=new LiveListingHelper(getwebdriver());
+		
+		 AssignmentmentHelper=new Assignment2Helper(getwebdriver());
 	}
 
 	

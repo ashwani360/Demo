@@ -1,36 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" name="Failed suite [AllTests]">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [AllTests]">
   <listeners>
     <listener class-name="Listeners.TestListener"/>
   </listeners>
   <test name="AddInventoryandSearchInventory(failed)">
     <classes>
-      <class name="Testscript.Login">
+      <class name="Testscript.Assignment">
         <methods>
-          <include name="LoginasAdmin"/>
+          <include name="VerifySubmittedReview"/>
+          <include name="WriteReviewonWallnethub"/>
           <include name="setup"/>
           <include name="Teardown"/>
+          <include name="LoginonWallnethub"/>
         </methods>
-      </class> <!-- Testscript.Login -->
-      <class name="Testscript.Inventory">
-        <methods>
-          <include name="AddInvetory"/>
-          <include name="NavigatetoInventory"/>
-        </methods>
-      </class> <!-- Testscript.Inventory -->
-      <class name="Testscript.Livelisting">
-        <methods>
-          <include name="SearchforVehicle"/>
-          <include name="VerifyliveListing"/>
-        </methods>
-      </class> <!-- Testscript.Livelisting -->
-      <class name="Testscript.InventoryListing">
-        <methods>
-          <include name="VerifyListing"/>
-          <include name="ViewLive"/>
-        </methods>
-      </class> <!-- Testscript.InventoryListing -->
+      </class> <!-- Testscript.Assignment -->
     </classes>
   </test> <!-- AddInventoryandSearchInventory(failed) -->
 </suite> <!-- Failed suite [AllTests] -->
