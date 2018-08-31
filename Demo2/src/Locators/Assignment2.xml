@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <locators>
+<Facebookhomepage>
+<Home>//a[text()='Home']</Home>
+<Statustextarea>//textarea[contains(@class,'navigationFocus')]</Statustextarea>
+<PostInputtext>//textarea[@name='xhpc_message']</PostInputtext>
+<SharePost>//*[contains(@class,'selected _42ft')]</SharePost>
+</Facebookhomepage>
+<FacebookProfilepage>
+<Profile>//a[@title='Profile']</Profile>
+<SubmitedPost>//*[contains(@class,'userContent')]/div/p</SubmitedPost>
+</FacebookProfilepage>
 <insurancepage>
 <CurrentRating>//*[@id="wh-body-inner"]/div[2]/div[3]/span</CurrentRating>
 <fourthrating>//a[text()='4']</fourthrating>

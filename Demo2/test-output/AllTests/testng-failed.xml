@@ -12,7 +12,9 @@
           <include name="WriteReviewonWallnethub"/>
           <include name="setup"/>
           <include name="Teardown"/>
+          <include name="PostStatusonFacebook"/>
           <include name="LoginonWallnethub"/>
+          <include name="LoginonFaceBook"/>
         </methods>
       </class> <!-- Testscript.Assignment -->
     </classes>

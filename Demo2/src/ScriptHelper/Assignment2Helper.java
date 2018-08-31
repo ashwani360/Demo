@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
+import com.google.common.base.Verify;
 import com.relevantcodes.extentreports.LogStatus;
 
 import Driver.DriverHelper;
@@ -24,6 +25,38 @@ public class Assignment2Helper extends DriverHelper{
 	}
 
 //---------------------------------
+	public void GotoHomepage()throws Exception
+	{
+		Clickon(getwebelement(xml.getlocator("//locators/Facebookhomepage/Home")));
+		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Navigated to Profile Home Page");	  
+	}
+	public void Poststatus()throws Exception
+	{
+		Thread.sleep(1000);
+		Clickon(getwebelement(xml.getlocator("//locators/Facebookhomepage/Statustextarea")));
+		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Click on the Input Area to write the status");
+		Thread.sleep(1000);
+		SendKeys(getwebelement(xml.getlocator("//locators/Facebookhomepage/PostInputtext")),Getkeyvalue("FaceBook_Status"));
+		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Write the Status message");
+		Thread.sleep(1000);
+		Clickon(getwebelement(xml.getlocator("//locators/Facebookhomepage/SharePost")));
+		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Share the status message");
+	}
+	public void VerifyStatus()throws Exception
+	{
+		Thread.sleep(2000);
+		Clickon(getwebelement(xml.getlocator("//locators/FacebookProfilepage/Profile")));
+		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Navigated to Profile Page to Verify the status");
+		Thread.sleep(2000);
+		String Actual = GetText(getwebelement(xml.getlocator("//locators/FacebookProfilepage/SubmitedPost")));
+		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Get the Latest Status on the Profile");
+		String Expected = (Getkeyvalue("FaceBook_Status")).toLowerCase();
+		Assert.assertTrue(Actual.contains(Expected));
+		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Verify that the latest Post is same as submitted");
+		
+	}
+	
+	
 	public void OpenInsurancepage() throws Exception
 	{
 		openurl("WallnethubTestInsurance");

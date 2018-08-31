@@ -9,6 +9,7 @@
 			<class name="Testscript.Assignment">	
 				<methods>
 					<include name="LoginonFaceBook"/>
+					<include name="PostStatusonFacebook"/>
 					<include name="LoginonWallnethub"/>
 					<include name="WriteReviewonWallnethub"/>
 					<include name="VerifySubmittedReview"/>

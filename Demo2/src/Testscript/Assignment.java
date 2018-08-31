@@ -13,6 +13,14 @@ public class Assignment extends DriverTestcase {
 		Login.Login("Facebook");
 		Login.VerifySuccessLogin("Facebook");
 	}
+@Test
+public void PostStatusonFacebook() throws Exception
+{
+	ExtentTestManager.getTest().setDescription("Post Hello World Status on Facebook");
+	AssignmentmentHelper.GotoHomepage();
+	AssignmentmentHelper.Poststatus();
+	AssignmentmentHelper.VerifyStatus();
+}
 
 @Test
 	public void LoginonWallnethub() throws Exception
